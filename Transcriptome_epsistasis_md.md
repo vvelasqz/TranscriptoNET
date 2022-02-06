@@ -119,12 +119,12 @@ get_epistatic<-function(triple_union_list, thr=1){
 }
 ```
 
-## Barley model
+## Model
 
-We calculate all the effects for barley
+We calculate all the effects
 
 ``` r
-horvu_DE_table<- FC_padj_table[grep("HORVU",FC_padj_table$gene), ]
+horvu_DE_table<- FC_padj_table
 #Mla6 and Rar3
 wt_mla6_DE<- DE_list(DE_table=horvu_DE_table, num="wt", den="mla6", padj=0.001, DE=T, comb=comb, times=time)
 wt_rar3_DE<- DE_list(DE_table=horvu_DE_table, num="wt", den="rar3", padj=0.001, DE=T, comb=comb, times=time)
